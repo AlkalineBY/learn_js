@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Стрелочная функция</title>
+</head>
+<body>
+
+</body>
+<script>
+    const ask = (question, yes, no) => {
+        if (confirm(question)) yes()
+        else no();
+    };
+
+    ask(
+        "Вы согласны?",
+        () => alert("Вы согласились."),
+        () => alert("Вы отменили выполнение.")
+    );
+</script>
+</html>
