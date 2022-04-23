@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функции</title>
+</head>
+<body>
+</body>
+<script>
+    // Задача 1. Перепишите функцию, используя оператор '?' или '||'
+    const checkAge = (age) => {
+        return (age > 18) ? true : confirm('Родители разрешили?')
+    }
+    // или
+    const checkAge2 = (age) => {
+        return (age > 18) || confirm('Родители разрешили?')
+    }
+    checkAge(17);
+    checkAge2(19);
+
+    // Задача 2. Функция min(a, b)
+    const min = (a, b) => {
+        if (a > b) {
+            console.log(b);
+        } else {
+            console.log(a);
+        }
+    };
+    // или
+    const minTer = (a, b) => {
+        a > b ? console.log(b) : console.log(a);
+    }
+    min(2, 1);
+    minTer(3, 5);
+
+    // Задача 3. Функция pow(x,n)
+    const x = prompt('Введите любое целое число', '');
+    const n = prompt('Укажите степень числа', '');
+    const pow = () => {
+        if (n >= 1) {
+            alert(x ** n);
+        } else {
+            alert('Введите другое число');
+        }
+    };
+    pow();
+</script>
+</html>
