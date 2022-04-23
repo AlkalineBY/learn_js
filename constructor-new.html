@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструкторы, создание объектов через "new"</title>
+</head>
+<body>
+</body>
+<script>
+    // Задача 1. Создание калькулятора при помощи конструктора
+    function Calculator() {
+
+        this.read = function () {
+            this.a = +prompt('a?', '');
+            this.b = +prompt('b?', '');
+        };
+
+        this.sum = function () {
+            return this.a + this.b;
+        };
+
+        this.mul = function () {
+            return this.a * this.b;
+        };
+    }
+
+    let calculator = new Calculator();
+    calculator.read();
+
+    console.log('Сумма: ' + calculator.sum());
+    console.log('Произведение: ' + calculator.mul());
+
+    // Задача 2. Создаём Accumulator
+    function Accumulator(startingValue) {
+        this.value = startingValue;
+
+        this.read = function () {
+            this.value += +prompt('Сколько нужно добавить?', '');
+        };
+
+    }
+
+    const accumulator = new Accumulator(1);
+    accumulator.read();
+    accumulator.read();
+    console.log(accumulator.value);
+</script>
+</html>
