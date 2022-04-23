@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Логические операторы</title>
+</head>
+<body>
+</body>
+<script>
+    // Задача 1. Проверка значения из диапазона
+    const age1 = prompt('Введите Ваш возраст', '');
+    if (age1 >= 14 && age1 <= 90) {
+        alert('Доступ разрешён.');
+    } else {
+        alert('Доступ запрещён.');
+    }
+
+    // Задача 2. Проверка значения вне диапазона
+    const age2 = prompt('Введите Ваш возраст', '');
+    if (!(age2 >= 14 && age2 <= 90)) {
+        alert('Доступ запрещён.');
+    } else {
+        alert('Доступ разрешён.');
+    }
+
+    const age3 = prompt('Введите Ваш возраст', '');
+    if (age3 < 14 || age3 > 90) {
+        alert('Доступ запрещён.');
+    } else {
+        alert('Доступ разрешён.');
+    }
+
+    // Задача 3. Проверка логина.
+    const checkUser = prompt('Кто там?', '');
+    if (checkUser === 'Админ') {
+        const password = prompt('Пароль?', '');
+        if (password === 'Я Главный') {
+            alert('Здравствуйте!');
+        } else if (password === '' || password === null) {
+            alert('Отменено');
+        } else {
+            alert('Неверный пароль');
+        }
+    } else if (checkUser === '' || checkUser === null) {
+        alert('Отменено');
+    } else {
+        alert('Я Вас не знаю');
+    }
+</script>
+</html>
