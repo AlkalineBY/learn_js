@@ -28,9 +28,11 @@ const salaries = {
 };
 const sumSalaries = (obj) => {
     let salary = 0;
+
     for (let key in obj) {
         salary = salary + obj[key];
-    } return salary;
+    }
+    return salary;
 }
 console.log(sumSalaries(salaries));
 
