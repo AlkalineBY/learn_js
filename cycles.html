@@ -19,6 +19,7 @@
 
     // Задача 2. Замените for на while
     let i = 0;
+
     while (i < 3) {
         alert(`number ${i}!`);
         i++;
@@ -26,6 +27,7 @@
 
     // Задача 3. Повторять цикл, пока ввод неверен
     let number = prompt('Введите числе больше 100', '');
+
     while (number <= 100 && number) {
         number = prompt('Введите числе больше 100', '');
     }
@@ -37,6 +39,7 @@
 
     // Задача 4. Вывести простые числа
     const n = 10;
+
     nextPrime:
         for (let i = 2; i <= n; i++) {
             for (let j = 2; j < i; j++) {
